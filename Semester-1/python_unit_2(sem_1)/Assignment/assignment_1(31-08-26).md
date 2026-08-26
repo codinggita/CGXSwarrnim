@@ -1,6 +1,6 @@
 # Assignment-1
 
-**Deadline:** 31 August 2026
+**Deadline:** 31 August 26
 
 ## Topics Covered
 
