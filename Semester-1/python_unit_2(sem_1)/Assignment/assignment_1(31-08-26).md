@@ -30,6 +30,8 @@ There is an issue in the code. Find the issue and write one correct version of t
 name = "Raju"
 print("Name:", name)
 ```
+Answer: name="Raju"
+print("name:",name)
 
 ## Question 2
 
@@ -37,6 +39,8 @@ print("Name:", name)
 student_name = "Aman"
 print("Student Name:", Student_name)
 ```
+Answer:student_name = "Aman"
+print("student name:", student_name)
 
 ## Question 3
 
@@ -44,6 +48,8 @@ print("Student Name:", Student_name)
 student name = "Rahul"
 print("Student Name:", student name)
 ```
+Answer:student_name = "Rahul"
+print("student_name:", student_name)
 
 ## Question 4
 
@@ -51,6 +57,8 @@ print("Student Name:", student name)
 1student_name = "Ravi"
 print("Student Name:", 1student_name)
 ```
+Answer: student_name1 = "Ravi"
+print("student_name1:", student_name1)
 
 ## Question 5
 
@@ -58,6 +66,8 @@ print("Student Name:", 1student_name)
 student-name = "Rohan"
 print("Student Name:", student-name)
 ```
+Answer: student_name = "Rohan"
+print("student_name:", student_name)
 
 ## Question 6
 
@@ -68,6 +78,11 @@ student_age = 19
 print("Name:", student_name)
 print("Age:", student_age)
 ```
+Answer: student_name = "Neha"
+student_age = 19
+
+print("Name:", student_name)
+print("Age:", student_age)
 
 ## Question 7
 
@@ -78,6 +93,11 @@ student_name = "Raj"
 print("Student 1:", Student_Name)
 print("Student 2:", student_name)
 ```
+Answer:student_name1 = "Karan"
+student_name2 = "Raj"
+
+print("Student 1:", student_name1)
+print("Student 2:", student_name2)
 
 ## Question 8
 
@@ -88,6 +108,11 @@ student age = 19
 print("Name:", student_name)
 print("Age:", student_age)
 ```
+Answer:student_name = "Priya"
+student_age = 19
+
+print("Name:", student_name)
+print("Age:", student_age)
 
 ## Question 9
 
@@ -98,6 +123,11 @@ student_age = 18
 print("Name:", 2name)
 print("Age:", student_age)
 ```
+Answer:name2 = "Amit"
+student_age = 18
+
+print("Name:", name2)
+print("Age:", student_age)
 
 ## Question 10
 
@@ -108,6 +138,11 @@ student_name = "Meera"
 print("College:", college_name)
 print("Student:", studentName)
 ```
+Answer:college_name = "ABC College"
+student_name = "Meera"
+
+print("College:", college_name)
+print("Student:", student_name)
 
 ## Question 11
 
@@ -117,6 +152,10 @@ last_name = "Patel"
 
 print("Full Name:", first_name, last_name)
 ```
+Answer:first_name = "Raj"
+last_name = "Patel"
+
+print("Full Name:", first_name, last_name)
 
 ## Question 12
 
@@ -126,6 +165,10 @@ last_name = "Patel"
 
 print("Full Name:", first_name, last_name)
 ```
+Answer:first_name = "Raj"
+last_name = "Patel"
+
+print("Full Name:", first_name, last_name)
 
 ---
 
@@ -158,7 +201,11 @@ Create variables for the student's name, age, course, and city.
 ```text
 My name is Rahul Raj. I am 18 years old. I am studying B.Tech and I live in Patna.
 ```
-
+Answer: name="Rahul Raj"
+age=18
+course="B.tech"
+city="Patna"
+print("My name is",name+".","I am",age,"years old. I am studing",course,"and i live in",city+".")
 ## Question 14 — Student Details
 
 Create variables for the student's name, roll number, branch, and semester.
@@ -175,6 +222,11 @@ Create variables for the student's name, roll number, branch, and semester.
 ```text
 My name is Aman Kumar. My roll number is 101. I am studying Computer Science in semester 1.
 ```
+Answer: student_name="Aman Kumar"
+roll_number=101
+branch="Computer Science"
+semester=1
+print("My name is",student_name+".","My roll number is",roll_number,".","I am studying",branch,"in semester",semester)
 
 ## Question 15 — Personal Information
 
@@ -192,6 +244,11 @@ Create variables for name, age, gender, and city.
 ```text
 My name is Priya Sharma. I am 19 years old. I am Female and I live in Jaipur.
 ```
+Answer: name="Priya Sharma"
+age=19
+gender="Female"
+city="Jaipur"
+print("My name is",name+".","I am",age,"years old. I am",gender,"I live in",city)
 
 ## Question 16 — Mobile Details
 
@@ -209,6 +266,11 @@ Create variables for mobile brand, model, RAM, and storage.
 ```text
 I have a Samsung Galaxy A55 with 8 GB RAM and 256 GB storage.
 ```
+Answer:mobile_brand="Samsung"
+model="Galaxy A55"
+RAM=8
+storage=256
+print("I have a",brand,model,"with",RAM,"GB RAM and",storage,"GB storage")
 
 ## Question 17 — Employee Introduction
 
@@ -226,6 +288,11 @@ Create variables for employee name, job role, company, and experience.
 ```text
 My name is Rohit Kumar. I work as a Software Developer at ABC Technologies and I have 2 years of experience.
 ```
+Answer: employee_name="Rohit Kumar"
+job_role="Software Developer"
+company="ABC technologies"
+experience=2
+print("My name is",employee_name+"."," I work as a",job_role,"at",company,"and I have",experience,"years of experience.")
 
 ## Question 18 — College Information
 
@@ -243,6 +310,7 @@ Create variables for college name, course, branch, and city.
 ```text
 I am studying B.Tech in Information Technology at XYZ Institute of Technology in Ahmedabad.
 ```
+Answer: collage_name="XYZ Institute of Technology"
 
 ## Question 19 — Product Information
 
