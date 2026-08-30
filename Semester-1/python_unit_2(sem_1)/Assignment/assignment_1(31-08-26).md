@@ -206,6 +206,7 @@ age=18
 course="B.tech"
 city="Patna"
 print("My name is",name+".","I am",age,"years old. I am studing",course,"and i live in",city+".")
+
 ## Question 14 — Student Details
 
 Create variables for the student's name, roll number, branch, and semester.
@@ -311,6 +312,10 @@ Create variables for college name, course, branch, and city.
 I am studying B.Tech in Information Technology at XYZ Institute of Technology in Ahmedabad.
 ```
 Answer: collage_name="XYZ Institute of Technology"
+course="B.Tech"
+branch="Information Technology"
+city="Ahmedabad"
+print("I am studying",course,"in",branch,"at",collage_name,"in",city)
 
 ## Question 19 — Product Information
 
@@ -328,6 +333,11 @@ Create variables for product name, price, brand, and quantity.
 ```text
 I bought 1 HP Laptop for 55000 rupees.
 ```
+Answer: product_name="Laptop"
+brand="HP"
+price=55000
+quantity=1
+print("I brought",)
 
 ## Question 20 — Family Details
 
