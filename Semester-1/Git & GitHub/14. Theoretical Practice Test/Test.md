@@ -63,7 +63,7 @@ git push
 
 ### Q7. Explain the complete Git workflow using the following diagram:
 
-
+```
 Working Directory
        ↓
 Staging Area
