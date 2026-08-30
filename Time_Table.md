@@ -4,8 +4,8 @@
 
 | Time        | CG LAB 1                        
 | ----------- | ---------------------
-| 10:00–11:30  | Github(Nikhil Sir)    |
-| 11:30–1:00 | Python (Sumit Sir)     |
+| 9:00–11:00  | Github(Nikhil Sir)    |
+| 11:00–1:00 | Python (Sumit Sir)     |
 | 1:00–2:00  | Break                 | 
 | 2:00–4:00   | HTML(Sumit Sir)      |
 | 4:00–4:30   | Break    |
