@@ -355,6 +355,11 @@ Create variables for your name, father's name, mother's name, and city.
 ```text
 My name is Rahul Raj. My father's name is Rajesh Kumar. My mother's name is Sunita Kumar. I live in Patna.
 ```
+ANSWER:  name="Rahul Raj"
+father_name="Rajesh Kumar"
+mother_name="Sunita Kumar"
+city="Patna"
+print("My name is",name+".","My father name is",father_name+".","My mother name is",mother_name+".","I live in",city)
 
 ## Question 21 — Student Result
 
