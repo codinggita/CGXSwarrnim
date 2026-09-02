@@ -1,0 +1,506 @@
+# Comparison (Relational) Operators in Python
+
+## 1. What Are Comparison Operators?
+
+Comparison operators, also called **relational operators**, are used to compare two values or expressions.
+
+The result of a comparison is always a **Boolean value**:
+
+- `True`
+- `False`
+
+For example:
+
+```python
+x = 10
+y = 20
+
+print(x < y)
+```
+
+Output:
+
+```text
+True
+```
+
+Here, Python compares `10` and `20`. Since `10` is less than `20`, the result is `True`.
+
+---
+
+## 2. Comparison Operators in Python
+
+Python provides six commonly used comparison operators:
+
+| Operator | Meaning | Example | Result |
+|---|---|---|---|
+| `==` | Equal to | `10 == 10` | `True` |
+| `!=` | Not equal to | `10 != 20` | `True` |
+| `>` | Greater than | `20 > 10` | `True` |
+| `<` | Less than | `10 < 20` | `True` |
+| `>=` | Greater than or equal to | `20 >= 20` | `True` |
+| `<=` | Less than or equal to | `10 <= 20` | `True` |
+
+---
+
+## 3. Equal To (`==`)
+
+The `==` operator checks whether two values are equal.
+
+```python
+a = 10
+b = 10
+
+print(a == b)
+```
+
+Output:
+
+```text
+True
+```
+
+Because both values are `10`, the result is `True`.
+
+### Important: `=` vs `==`
+
+These two operators have different purposes.
+
+```python
+x = 10
+```
+
+Here, `=` is the **assignment operator**. It assigns `10` to `x`.
+
+```python
+x == 10
+```
+
+Here, `==` is the **comparison operator**. It checks whether `x` is equal to `10`.
+
+Remember:
+
+```text
+=   -> Assignment
+==  -> Comparison
+```
+
+---
+
+## 4. Not Equal To (`!=`)
+
+The `!=` operator checks whether two values are different.
+
+```python
+a = 10
+b = 20
+
+print(a != b)
+```
+
+Output:
+
+```text
+True
+```
+
+Because `10` and `20` are different, the result is `True`.
+
+If both values are the same:
+
+```python
+print(10 != 10)
+```
+
+Output:
+
+```text
+False
+```
+
+---
+
+## 5. Greater Than (`>`)
+
+The `>` operator checks whether the value on the left is greater than the value on the right.
+
+```python
+age = 20
+
+print(age > 18)
+```
+
+Output:
+
+```text
+True
+```
+
+Because `20` is greater than `18`.
+
+---
+
+## 6. Less Than (`<`)
+
+The `<` operator checks whether the value on the left is less than the value on the right.
+
+```python
+age = 16
+
+print(age < 18)
+```
+
+Output:
+
+```text
+True
+```
+
+Because `16` is less than `18`.
+
+---
+
+## 7. Greater Than or Equal To (`>=`)
+
+The `>=` operator checks whether the left value is:
+
+1. Greater than the right value, or
+2. Equal to the right value.
+
+For example:
+
+```python
+marks = 40
+
+print(marks >= 40)
+```
+
+Output:
+
+```text
+True
+```
+
+Here, `40` is equal to `40`, so the result is `True`.
+
+Another example:
+
+```python
+marks = 50
+
+print(marks >= 40)
+```
+
+Output:
+
+```text
+True
+```
+
+Here, `50` is greater than `40`.
+
+---
+
+## 8. Less Than or Equal To (`<=`)
+
+The `<=` operator checks whether the left value is less than or equal to the right value.
+
+```python
+age = 18
+
+print(age <= 18)
+```
+
+Output:
+
+```text
+True
+```
+
+Because `18` is equal to `18`.
+
+Another example:
+
+```python
+age = 15
+
+print(age <= 18)
+```
+
+Output:
+
+```text
+True
+```
+
+Because `15` is less than `18`.
+
+---
+
+# 9. A Real-Life Example: Comparing Marks
+
+Suppose we have the marks of two students and want to compare them.
+
+```python
+rahul = 75
+aman = 60
+
+print(rahul > aman)
+```
+
+Output:
+
+```text
+True
+```
+
+Here Python compares:
+
+```python
+75 > 60
+```
+
+Since `75` is greater than `60`, the result is `True`.
+
+---
+
+# 11. Comparing Two Variables
+
+Comparison operators can also be used with variables.
+
+```python
+a = 50
+b = 30
+
+print(a > b)
+print(a < b)
+print(a == b)
+print(a != b)
+```
+
+Output:
+
+```text
+True
+False
+False
+True
+```
+
+Let's understand each comparison:
+
+```text
+50 > 30   -> True
+50 < 30   -> False
+50 == 30  -> False
+50 != 30  -> True
+```
+
+---
+
+# 12. Comparing Strings
+
+Comparison operators can also be used with strings.
+
+```python
+name1 = "Rahul"
+name2 = "Rahul"
+
+print(name1 == name2)
+```
+
+Output:
+
+```text
+True
+```
+
+Python checks whether the two strings contain the same value.
+
+Another example:
+
+```python
+name1 = "Rahul"
+name2 = "Aman"
+
+print(name1 == name2)
+print(name1 != name2)
+```
+
+Output:
+
+```text
+False
+True
+```
+
+---
+
+# 13. Important Tricky Example
+
+Consider this code:
+
+```python
+x = 10
+
+print(x == 10)
+print(x = 10)
+```
+
+The first line is correct:
+
+```python
+print(x == 10)
+```
+
+It checks whether `x` is equal to `10`.
+
+The second line is incorrect:
+
+```python
+print(x = 10)
+```
+
+The `=` operator is used for assignment, not comparison. Python will produce a `SyntaxError`.
+
+Remember:
+
+```text
+=   -> Assignment
+==  -> Comparison
+```
+
+---
+
+# 14. Comparison Operators Return Boolean Values
+
+Comparison expressions always produce either `True` or `False`.
+
+```python
+a = 10
+b = 20
+
+result = a < b
+
+print(result)
+print(type(result))
+```
+
+Output:
+
+```text
+True
+<class 'bool'>
+```
+
+The result is stored in the variable `result`, and its data type is `bool`.
+
+---
+
+# 15. A Good Example to Understand All Operators
+
+Let's take two students and compare their marks.
+
+```python
+rahul = 75
+aman = 60
+
+print("Rahul > Aman:", rahul > aman)
+print("Rahul < Aman:", rahul < aman)
+print("Rahul == Aman:", rahul == aman)
+print("Rahul != Aman:", rahul != aman)
+print("Rahul >= Aman:", rahul >= aman)
+print("Rahul <= Aman:", rahul <= aman)
+```
+
+Output:
+
+```text
+Rahul > Aman: True
+Rahul < Aman: False
+Rahul == Aman: False
+Rahul != Aman: True
+Rahul >= Aman: True
+Rahul <= Aman: False
+```
+
+### Understand It Step by Step
+
+Given:
+
+```text
+Rahul = 75
+Aman  = 60
+```
+
+Python checks:
+
+```text
+75 > 60    -> True
+75 < 60    -> False
+75 == 60   -> False
+75 != 60   -> True
+75 >= 60   -> True
+75 <= 60   -> False
+```
+
+This is the basic idea behind comparison operators.
+
+---
+
+# 16. Quick Practice Example
+
+Try to predict the output before running the code:
+
+```python
+a = 15
+b = 10
+
+print(a > b)
+print(a < b)
+print(a == b)
+print(a != b)
+print(a >= b)
+print(a <= b)
+```
+
+Expected output:
+
+```text
+True
+False
+False
+True
+True
+False
+```
+
+---
+
+# 17. Quick Summary
+
+| Operator | Meaning | Example | Result |
+|---|---|---|---|
+| `==` | Equal to | `5 == 5` | `True` |
+| `!=` | Not equal to | `5 != 3` | `True` |
+| `>` | Greater than | `5 > 3` | `True` |
+| `<` | Less than | `3 < 5` | `True` |
+| `>=` | Greater than or equal to | `5 >= 5` | `True` |
+| `<=` | Less than or equal to | `3 <= 5` | `True` |
+
+---
+
+# 18. Key Points to Remember
+
+1. Comparison operators are used to **compare values**.
+2. They return a Boolean value: `True` or `False`.
+3. `==` means **equal to**, while `=` means **assignment**.
+4. `!=` means **not equal to**.
+5. `>` means **greater than**.
+6. `<` means **less than**.
+7. `>=` means **greater than or equal to**.
+8. `<=` means **less than or equal to**.
+9. Comparison operators can be used directly inside `print()` to see their Boolean result.
+10. Comparison operators are commonly used to compare numbers, strings, and other comparable values.
+
+---
