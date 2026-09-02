@@ -68,7 +68,7 @@ Run `git log --oneline` frequently so you can see the commit history clearly.
    git status
    ```
 
-3. Create a file named `reset-comparison.txt` and write in your own words:
+3. write the short answers in your own words in your notebook:
    - What is the difference between `--soft`, `--mixed`, and `--hard`?
    - Which one keeps changes staged?
    - Which one discards the changes completely?
@@ -76,7 +76,7 @@ Run `git log --oneline` frequently so you can see the commit history clearly.
 
 **Submit:**
 - Screenshots of `git status` after each type of reset (`--soft`, `--mixed`, `--hard`)
-- Content of `reset-comparison.txt`
+- Photos of written answers.
 - Repository link
 
 ---
@@ -96,14 +96,14 @@ Run `git log --oneline` frequently so you can see the commit history clearly.
    git log --oneline
    ```
 4. Observe that a **new commit** was created (the history was not deleted).
-5. Create a file `revert-explanation.txt` and answer:
+5. write the short answers in your own words in your notebook:
    - What does `git revert` do?
    - How is it different from `git reset`?
    - When is `git revert` safer than `git reset`?
 
 **Submit:**
 - Screenshot of `git log --oneline` showing the revert commit
-- Content of `revert-explanation.txt`
+- Photos of written answers.
 - Repository link
 
 ---
@@ -116,7 +116,7 @@ Run `git log --oneline` frequently so you can see the commit history clearly.
    - Make 3 commits on a file called `project.txt`.
 2. Use `git reset --soft HEAD~1` and then create a new improved commit.
 3. Later, use `git revert` on one commit and show that history is preserved.
-4. Create a final file named `day16-safety.txt` and write:
+4. Write short answers in your notebook:
    - When should you use `git reset --soft`?
    - When should you use `git reset --hard`? (and why be careful)
    - When should you prefer `git revert`?
@@ -124,7 +124,7 @@ Run `git log --oneline` frequently so you can see the commit history clearly.
 
 **Submit:**
 - Screenshot of final `git log --oneline`
-- Content of `day16-safety.txt`
+- Photos of written answers.
 - Repository link
 
 ---
@@ -134,9 +134,9 @@ Run `git log --oneline` frequently so you can see the commit history clearly.
 | # | Item | Required? |
 |---|------|-----------|
 | 1 | Assignment 1 – before/after reset screenshots | Yes |
-| 2 | Assignment 2 – three reset mode screenshots + comparison file | Yes |
-| 3 | Assignment 3 – revert screenshot + explanation file | Yes |
-| 4 | Assignment 4 – final log + safety file | Yes |
+| 2 | Assignment 2 – three reset mode screenshots + written answer photos | Yes |
+| 3 | Assignment 3 – revert screenshot + written answer photos | Yes |
+| 4 | Assignment 4 – final log + written answer photos | Yes |
 | — | GitHub repository link | Yes |
 
 **Important Notes:**
