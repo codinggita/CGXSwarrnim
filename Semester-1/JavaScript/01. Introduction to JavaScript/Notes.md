@@ -144,7 +144,8 @@ Think of a restaurant:
                                                  └─────────────────────┘
 ```
 
-<img width="537" height="316" alt="images" src="https://github.com/user-attachments/assets/49c628bb-20a5-4245-b113-5c495600828d" />
+<img width="603" height="331" alt="image" src="https://github.com/user-attachments/assets/fe55ca19-c0fc-454d-85a5-cf207a2f314f" />
+
 
 ### Basic Difference between Frontend and Backend
 
