@@ -98,8 +98,70 @@ With JavaScript, a webpage can:
 When the user clicks the button, JavaScript displays an alert.
 
 ***
+## 5. Web Development
 
-## 5. The Three Pillars of Web Development
+Web development is the process of creating web pages, websites, and web applications that run in a browser.  
+Examples include personal portfolios, e-commerce sites like Amazon, social media platforms like Instagram, and web apps like Google Docs.  
+JavaScript is mainly used for web development because it runs directly in the browser and can also power the server side.
+
+### 5.1 Front-end Web Development
+Front-end (also called client-side) development focuses on everything the user sees and interacts with in the browser.  
+We use **HTML**, **CSS**, and **JavaScript** (along with libraries/frameworks like **React**, **Angular**, and **Vue.js**) to build the user interface and client-side logic.
+
+### 5.2 Backend Web Development
+Backend (also called server-side) development handles the logic, data processing, and storage that happen behind the scenes.  
+We use **Node.js** and **Express.js** for the backend. The **server** and **database** are core parts of the backend.
+
+### 5.3 Front-end and Backend Analogy
+
+Think of a restaurant:
+
+- **Customer (User)** → sits at the table and places an order  
+- **Waiter (Server)** → takes the order to the kitchen and brings the food back  
+- **Chef (Database)** → prepares the food and stores the ingredients  
+
+```text
+┌─────────────────────┐         Request          ┌─────────────────────┐
+│                     │ ───────────────────────► │                     │
+│   FRONTEND /        │                          │   BACKEND /         │
+│   CLIENT SIDE       │                          │   SERVER SIDE       │
+│                     │                          │                     │
+│  ┌───────────────┐  │                          │  ┌───────────────┐  │
+│  │               │  │                          │  │               │  │
+│  │   UI Screen   │  │                          │  │    Server     │  │
+│  │   (Browser)   │  │                          │  │  (Node.js +   │  │
+│  │               │  │                          │  │   Express)    │  │
+│  └───────────────┘  │                          │  └───────────────┘  │
+│                     │                          │           │         │
+└─────────────────────┘                          │           │         │
+          ▲                                      │           ▼         │
+          │                                      │  ┌───────────────┐  │
+          │             Response                 │  │   Database    │  │
+          └──────────────────────────────────────│  │  (NonSQL/SQL) │  │
+                                                 │  │ e.g.(MongoDB/ │  │
+                                                 │  │      mySQL)   │  │
+                                                 │  └───────────────┘  │
+                                                 └─────────────────────┘
+```
+
+<img width="537" height="316" alt="images" src="https://github.com/user-attachments/assets/49c628bb-20a5-4245-b113-5c495600828d" />
+
+### Basic Difference between Frontend and Backend
+
+| Point              | Frontend (Client-side)                  | Backend (Server-side)                     |
+|--------------------|-----------------------------------------|-------------------------------------------|
+| Runs on            | User’s browser                          | Remote server                             |
+| Main technologies  | HTML, CSS, JavaScript (React, Angular, Vue) | Node.js, Express.js, databases            |
+| Responsibility     | What the user sees and interacts with   | Business logic, data storage, security    |
+| Visible to user    | Yes                                     | No (works behind the scenes)              |
+| Example            | Buttons, forms, animations, UI layout   | Login authentication, saving data, APIs   |
+
+
+
+
+***
+
+## 6. The Three Pillars of Front-end Web Development
 
 Websites commonly use three technologies together:
 
@@ -156,7 +218,7 @@ Websites commonly use three technologies together:
 
 ***
 
-## 6. Runs in the Browser
+## 7. Runs in the Browser
 
 Every modern browser has a JavaScript engine that reads and executes JavaScript code.
 
@@ -171,7 +233,7 @@ Because browsers include JavaScript engines, JavaScript can run directly in the 
 
 ***
 
-## 7. Features of JavaScript
+## 8. Features of JavaScript
 
 ### 7.1 Dynamic Typing
 
@@ -185,7 +247,7 @@ data = "JavaScript";
 console.log(typeof data); // "string"
 ```
 
-### 7.2 Event-Driven
+### 8.2 Event-Driven
 
 JavaScript can respond to events caused by the user or browser.
 
@@ -196,7 +258,7 @@ Examples:
 - `submit`
 - `load`
 
-### 7.3 Cross-Platform
+### 8.3 Cross-Platform
 
 JavaScript can run on:
 
@@ -209,13 +271,13 @@ JavaScript can run on:
 
 
 
-## 10. Node.js
+## 9. Node.js
 
 Node.js is a **runtime environment for JavaScript** that allows JavaScript to run outside the browser. With Node.js, developers can create servers using JavaScript, so JavaScript can also be used for backend web development. [developer.ibm](https://developer.ibm.com/languages/node-js/)
 
 ***
 
-## 11. Multipurpose Language
+## 10. Multipurpose Language
 
 JavaScript can be used in many areas with different frameworks and technologies.
 
@@ -230,7 +292,7 @@ JavaScript can be used in many areas with different frameworks and technologies.
 
 ***
 
-## 12. ECMAScript and JavaScript
+## 11. ECMAScript and JavaScript
 
 **ECMAScript is not a programming language like JavaScript.** It is a standard or rulebook that defines how the JavaScript language should work.
 
@@ -246,9 +308,9 @@ JavaScript is a programming language that follows the ECMAScript standard. JavaS
 
 ***
 
-## 13. How to Run JavaScript
+## 12. How to Run JavaScript
 
-### Browser Console
+### 12.1 Browser Console
 
 1. Open a browser.
 2. Press `F12`.
@@ -259,9 +321,28 @@ JavaScript is a programming language that follows the ECMAScript standard. JavaS
 console.log("Hello JavaScript!");
 ```
 
-### External JavaScript File
+### 12.2 Inline JavaScript (inside HTML file)
 
-**script.js**
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Inline JavaScript</title>
+</head>
+<body>
+  <h1>Hello World</h1>
+
+  <script>
+    console.log("Hello from Inline JavaScript!");
+    alert("This is running inside the HTML file");
+  </script>
+</body>
+</html>
+```
+ 
+### 12.3 External JavaScript File
+
+**script.js or index.js**
 
 ```js
 console.log("Hello from JavaScript");
@@ -285,7 +366,7 @@ console.log("Hello from JavaScript");
 
 ***
 
-## 14. Why Learn JavaScript?
+## 13. Why Learn JavaScript?
 
 - It makes websites interactive.
 - It can run in browsers and on servers.
@@ -296,7 +377,7 @@ console.log("Hello from JavaScript");
 
 ***
 
-## 15. Case Sensitivity
+## 14. Case Sensitivity
 
 JavaScript is case-sensitive.
 
@@ -311,7 +392,7 @@ console.log(Name); // Error
 
 ***
 
-## 16. Comments
+## 15. Comments
 
 Comments are ignored by JavaScript and are used to explain code.
 
