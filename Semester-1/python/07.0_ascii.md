@@ -1,0 +1,142 @@
+# ASCII / Unicode
+
+**ASCII** stands for **American Standard Code for Information Interchange**.
+
+ASCII assigns numeric values to characters such as digits, uppercase letters, lowercase letters, and space.
+
+---
+
+## 1. Numbers (0–9)
+
+The ASCII values for numbers `0` to `9` are from **48 to 57**.
+
+| Character | ASCII Value |
+|---|---:|
+| `0` | 48 |
+| `1` | 49 |
+| `2` | 50 |
+| `3` | 51 |
+| `4` | 52 |
+| `5` | 53 |
+| `6` | 54 |
+| `7` | 55 |
+| `8` | 56 |
+| `9` | 57 |
+
+---
+
+## 2. Uppercase Letters (A–Z)
+
+The ASCII values for uppercase letters `A` to `Z` are from **65 to 90**.
+
+| Character | ASCII Value |
+|---|---:|
+| `A` | 65 |
+| `B` | 66 |
+| `C` | 67 |
+| `...` | ... |
+| `Z` | 90 |
+
+---
+
+## 3. Lowercase Letters (a–z)
+
+The ASCII values for lowercase letters `a` to `z` are from **97 to 122**.
+
+| Character | ASCII Value |
+|---|---:|
+| `a` | 97 |
+| `b` | 98 |
+| `c` | 99 |
+| `...` | ... |
+| `z` | 122 |
+
+---
+
+## 4. Space Character
+
+The ASCII value of a space character is:
+
+```text
+Space = 32
+```
+
+---
+
+## 5. Useful Python Functions
+
+### `ord()`
+
+The `ord()` function is used to get the ASCII/Unicode value of a single character.
+
+```python
+print(ord('A'))
+print(ord('a'))
+print(ord('0'))
+```
+
+### Output
+
+```text
+65
+97
+48
+```
+
+---
+
+### `chr()`
+
+The `chr()` function is used to convert an ASCII/Unicode integer back into its corresponding character.
+
+```python
+print(chr(65))
+print(chr(97))
+print(chr(48))
+```
+
+### Output
+
+```text
+A
+a
+0
+```
+
+---
+
+## 6. Converting Lowercase to Uppercase
+
+For English letters, the ASCII value of an uppercase letter is **32 less** than its corresponding lowercase letter.
+
+So, to convert a lowercase letter to uppercase:
+
+```text
+Uppercase ASCII Value = Lowercase ASCII Value - 32
+```
+
+### Example
+
+```python
+print(ord('a'))
+print(ord('a') - 32)
+print(chr(ord('a') - 32))
+```
+
+### Output
+
+```text
+97
+65
+A
+```
+
+Similarly:
+
+```text
+'a' → 97
+97 - 32 → 65
+65 → 'A'
+```
+
+> **Note:** In Python, you can also use `.upper()` and `.lower()` for direct case conversion.
