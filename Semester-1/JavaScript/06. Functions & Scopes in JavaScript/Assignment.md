@@ -64,3 +64,45 @@
 
 4. How do functions help in reducing code repetition? Explain with one real-world example.  
 5. Mention any three advantages of using functions in a program.
+
+
+---
+
+### Section 8: Function Scope
+
+**Practical Questions**
+1. Create a function `showCity` that declares a local variable `city = "Ahmedabad"` and prints it. After calling the function, try to print `city` outside and note what happens.  
+2. Declare a global variable `trainer = "CodingGita Mentor"`. Write a function `displayTrainer` that prints this global variable. Call the function and also print the variable outside the function.  
+3. Write a function `demoScope` that contains a local variable `value = 50`. Print the variable inside the function. Then try accessing the same variable outside and explain the output/error.
+
+**Theory Questions**
+4. A variable declared inside a function cannot be used outside. Why does JavaScript follow this rule? How does it help in writing better programs?  
+5. What will happen if a global variable and a local variable have the same name? Which one will the function use? Explain briefly.
+
+---
+
+### Section 9: Combining Function Concepts
+
+**Practical Questions**
+1. Write a function `generateMessage(name, score)` that calculates whether the student has passed (score ≥ 40) and returns a complete sentence like: `"Aarav has scored 65 and the result is Pass"`.  
+2. Create a function `billCalculator(item1, item2, item3)` that returns the total amount and also mentions if the customer gets a discount (total ≥ 1000 → "Discount Applied", otherwise "No Discount").  
+3. Write a function `performanceReport(student, m1, m2, m3)` that calculates total and average, then returns a formatted string containing name, total, average and a remark ("Excellent" if average ≥ 80, otherwise "Keep Improving").
+
+**Theory Questions**
+
+4. Why is it better to perform multiple related tasks (calculation + decision + message) inside one function instead of writing separate pieces of code?  
+5. How does combining concepts like parameters, return and conditions inside a single function improve code quality?
+
+---
+
+### Section 10: Nested Functions
+
+**Practical Questions**
+1. Write a function `mainTask` that contains an inner function `helperTask`. The inner function should return `"Task completed successfully"`. Call the inner function from `mainTask` and return its result.  
+2. Create a function `calculateFinal(m1, m2)` that has an inner function `getTotal` to add the marks. Use the inner function and return a message: `"Final marks = "` followed by the total.  
+3. Write a function `studentStatus(name, marks)` containing an inner function `getGrade`. The inner function returns `"A"` if marks ≥ 80, `"B"` if marks ≥ 60, otherwise `"C"`. Return a final sentence using the name and grade.
+
+**Theory Questions**
+
+4. What is the main advantage of writing a function inside another function? When should we use nested functions?  
+5. Can an inner function access variables of the outer function? What about the reverse (outer accessing inner variables)? Explain.
