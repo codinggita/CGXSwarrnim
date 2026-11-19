@@ -1,6 +1,6 @@
-# Scope in JavaScript
+# **Scope in JavaScript**
 
-# 1. What Is Scope?
+## **1. What Is Scope?**
 
 Scope defines **where a variable can be accessed** in a program.
 
@@ -11,36 +11,56 @@ In **Unit 1**, JavaScript has only two types of scope for us:
 
 (Because `var` does not support block scope.)
 
----
+### **Activity Time**
 
-# 2. Global Scope
+1. What do you understand by scope in JavaScript?
+2. Which two types of scope are covered in this unit?
+3. Why doesn't `var` support block scope?
+
+## **2. Global Scope**
 
 A variable declared outside any function is in the **global scope** and can be accessed anywhere.
 
-### Example:
+### **Example:**
 
-```javascript
+```
 var college = "CodingGita";
 
 function showCollege() {
     console.log(college);
 }
 
-showCollege();       // CodingGita
+showCollege();        // CodingGita
 console.log(college); // CodingGita
 ```
 
 `college` lives in global memory.
 
----
+### **Activity Time**
 
-# 3. Function Scope
+1\. Predict the output:
+
+```
+var city = "Ahmedabad";
+
+function displayCity() {
+    console.log(city);
+}
+
+displayCity();
+console.log(city);
+```
+
+2. Write a program that declares a global variable `studentName = "Rahul"` and prints it both inside and outside a function.
+3. Can a function access a variable declared outside it? Explain with an example.
+
+## **3. Function Scope**
 
 Any variable declared with `var` *inside* a function is available **only inside that function**.
 
-### Example:
+### **Example:**
 
-```javascript
+```
 function studentMarks() {
     var marks = 85;
     console.log(marks);
@@ -52,24 +72,40 @@ console.log(marks); // Error: marks is not defined
 
 Variables inside a function are **local**.
 
----
+### **Activity Time**
 
-# 4. No Block Scope in Unit 1 (`var` ignores blocks)
+1\. Predict the output and identify the error:
+
+```
+function employeeInfo() {
+    var salary = 25000;
+    console.log(salary);
+}
+
+employeeInfo();
+console.log(salary);
+```
+
+2. Write a function `calculateAge()` that declares a local variable `age = 20` and prints it.
+3. Can a variable declared inside a function be accessed outside that function? Why?
+
+## **4. No Block Scope in Unit 1 (**`var`**&#x20;ignores blocks)**
 
 This is a major point for beginners:
+
 `var` does NOT respect block boundaries.
 
 Blocks include:
 
-* if
-* for
-* while
-* switch
-* any `{ }` not belonging to a function
+- if
+- for
+- while
+- switch
+- any `{ }` not belonging to a function
 
-### Example:
+### **Example:**
 
-```javascript
+```
 if (true) {
     var x = 10;
 }
@@ -79,11 +115,33 @@ console.log(x); // 10 (still accessible outside)
 
 Even though `x` is inside `{}`, `var` makes it global (or function-scoped if inside a function).
 
----
+### **Activity Time**
 
-# 5. Block example with loops
+1\. Predict the output:
 
-```javascript
+```
+if (true) {
+    var marks = 75;
+}
+
+console.log(marks);
+```
+
+2\. What will be the output? Explain why.
+
+```
+if (false) {
+    var result = 100;
+}
+
+console.log(result);
+```
+
+3\. Declare a variable `message` using `var` inside an `if` block and print it outside the block.
+
+## **5. Block Example with Loops**
+
+```
 for (var i = 1; i <= 3; i++) {
     console.log("Inside:", i);
 }
@@ -102,15 +160,28 @@ Outside: 4
 
 Because `var` is **not block scoped**, `i` exists outside the loop.
 
----
+### **Activity Time**
 
-# 6. Function Scope Inside Loops
+1\. Predict the complete output:
+
+```
+for (var i = 2; i <= 4; i++) {
+    console.log(i);
+}
+
+console.log("Final:", i);
+```
+
+2. Why can we access the variable `i` after the loop?
+3. Write a `for` loop using `var` that prints numbers from 1 to 5 and prints the final value of the loop variable outside the loop.
+
+## **6. Function Scope Inside Loops**
 
 If a loop is inside a function, the variable becomes local to that function.
 
-### Example:
+### **Example:**
 
-```javascript
+```
 function test() {
     for (var i = 1; i <= 3; i++) {
         console.log("Inside:", i);
@@ -125,42 +196,97 @@ console.log(i); // Error
 
 Explanation:
 
-* Inside the function → accessible
-* Outside the function → not accessible
+- Inside the function → accessible
+- Outside the function → not accessible
 
----
+### **Activity Time**
 
-# 7. Hoisting (var only)
+1\. Predict the output:
+
+```
+function displayNumbers() {
+    for (var num = 1; num <= 3; num++) {
+        console.log(num);
+    }
+
+    console.log("Final:", num);
+}
+
+displayNumbers();
+```
+
+2\. Which statement will produce an error and why?
+
+```
+function test() {
+    for (var i = 1; i <= 2; i++) {
+        console.log(i);
+    }
+
+    console.log(i);
+}
+
+test();
+console.log(i);
+```
+
+3\. Write a function `printTable()` that uses a `for` loop with `var` and prints the loop variable both after the loop and outside the function.
+
+## **7. Hoisting (**`var`**&#x20;only)**
 
 JavaScript **moves variable declarations to the top** of their scope before executing code.
 
 But **only the declaration** is moved, not the assignment.
 
-### Example:
+### **Example:**
 
-```javascript
+```
 console.log(a); // undefined
 var a = 10;
 ```
 
 Internally JavaScript behaves like:
 
-```javascript
+```
 var a;
 console.log(a); // undefined
 a = 10;
 ```
 
 Common mistake:
+
 Students think it should give an error, but it does not.
 
----
+### **Activity Time**
 
-# 8. Function Declaration Hoisting
+1\. Predict the output:
+
+```
+console.log(name);
+var name = "Rahul";
+console.log(name);
+```
+
+2\. Predict the output:
+
+```
+var x = 20;
+
+console.log(x);
+var x = 50;
+
+console.log(x);
+```
+
+3\. Why does `console.log(a)` print `undefined` instead of producing an error when `var a = 10` is written later?
+
+## **8. Function Declaration Hoisting**
 
 Function declarations are fully hoisted (name + body).
 
-```javascript
+### **Example:**
+
+```
 greet();  // Works
 
 function greet() {
@@ -168,20 +294,33 @@ function greet() {
 }
 ```
 
----
+### **Activity Time**
 
-# 9. Scope Chain (Very Important)
+1\. Predict the output:
+
+```
+welcome();
+
+function welcome() {
+    console.log("Welcome to JavaScript");
+}
+```
+
+2. Write a function `showMessage()` that prints `"Learning JavaScript"` and call it before its declaration.
+3. Why can we call a function before its declaration in JavaScript?
+
+## **9. Scope Chain (Very Important)**
 
 When accessing a variable:
 
-1. JavaScript looks inside the current scope
-2. If not found, goes to the next outer scope
-3. Continues until global scope
-4. If not found anywhere → error
+1. JavaScript looks inside the current scope.
+2. If not found, goes to the next outer scope.
+3. Continues until global scope.
+4. If not found anywhere → error.
 
-### Example:
+### **Example:**
 
-```javascript
+```
 var institute = "CodingGita";
 
 function department() {
@@ -203,21 +342,64 @@ department();
 
 Inner functions can access variables from:
 
-* their own scope
-* outer functions
-* global scope
+- Their own scope
+- Outer functions
+- Global scope
 
 Outer regions cannot access inner scopes.
 
----
+### **Activity Time**
 
-# 10. Variable Shadowing
+1\. Predict the output:
+
+```
+var country = "India";
+
+function stateInfo() {
+    var state = "Gujarat";
+
+    function cityInfo() {
+        var city = "Ahmedabad";
+
+        console.log(city);
+        console.log(state);
+        console.log(country);
+    }
+
+    cityInfo();
+}
+
+stateInfo();
+```
+
+2\. Identify which statement produces an error and explain why:
+
+```
+function outer() {
+    var x = 10;
+
+    function inner() {
+        var y = 20;
+        console.log(x);
+        console.log(y);
+    }
+
+    inner();
+}
+
+outer();
+console.log(x);
+```
+
+3\. Write a nested function program with a global variable `college`, an outer variable `dept`, and an inner variable `studentName`. Print all three from the inner function.
+
+## **10. Variable Shadowing**
 
 A local variable can **override** a global variable with the same name.
 
-### Example:
+### **Example:**
 
-```javascript
+```
 var score = 50;
 
 function test() {
@@ -231,13 +413,48 @@ console.log(score); // 50
 
 The inner value does not overwrite the outer value; it only hides it inside the function.
 
----
+### **Activity Time**
 
-# 11. Nested Functions (Pure Function Scope Example)
+1\. Predict the output:
 
-### Example:
+```
+var marks = 60;
 
-```javascript
+function result() {
+    var marks = 95;
+    console.log(marks);
+}
+
+result();
+console.log(marks);
+```
+
+2\. Predict the output:
+
+```
+var name = "Rahul";
+
+function student() {
+    var name = "Jenil";
+
+    function display() {
+        console.log(name);
+    }
+
+    display();
+}
+
+student();
+console.log(name);
+```
+
+3\. Write a program with a global variable `price = 1000` and a local variable with the same name `price = 500`. Print both values.
+
+## **11. Nested Functions (Pure Function Scope Example)**
+
+### **Example:**
+
+```
 function outer() {
     var teacher = "Kartik Sir";
 
@@ -255,58 +472,125 @@ outer();
 
 Inside `inner()` you can access both variables:
 
-* student (local)
-* teacher (outer function)
+- student (local)
+- teacher (outer function)
 
 But from outside:
 
-* teacher is not available
-* student is not available
+- teacher is not available
+- student is not available
 
----
+### **Activity Time**
 
-# 12. Common Errors with var
+1\. Predict the output:
 
-1. Creating global variables accidentally:
+```
+function first() {
+    var a = 10;
 
-```javascript
+    function second() {
+        var b = 20;
+        console.log(a + b);
+    }
+
+    second();
+}
+
+first();
+```
+
+2\. Find the error and explain why:
+
+```
+function outer() {
+    var course = "JavaScript";
+
+    function inner() {
+        var duration = "3 Months";
+        console.log(course);
+    }
+
+    inner();
+    console.log(duration);
+}
+
+outer();
+```
+
+3\. Create an outer function `teacherInfo()` with a variable `teacherName` and an inner function `subjectInfo()` with a variable `subject`. Print both variables inside the inner function.
+
+## **12. Common Errors with var**
+
+### **1. Creating global variables accidentally**
+
+```
 function test() {
-    x = 100; // missing var → becomes global
+    x = 100; // missing var → becomes global in non-strict mode
 }
 ```
 
-2. Expecting block scope (wrong assumption):
+### **2. Expecting block scope (wrong assumption)**
 
-```javascript
+```
 if (true) {
     var x = 20;
 }
 console.log(x); // 20
 ```
 
-3. Accessing variables before declaration:
+### **3. Accessing variables before declaration**
 
-```javascript
+```
 console.log(a);
 var a = 10;
 ```
 
-4. Colliding variable names because var allows redeclaration:
+### **4. Colliding variable names because var allows redeclaration**
 
-```javascript
+```
 var x = 10;
 var x = 20; // allowed, but confusing
 ```
 
----
+### **Activity Time**
 
-# 13. Exercises
+1\. Find and correct the mistake:
 
-### Exercise 1
+```
+function student() {
+    name = "Rahul";
+    console.log(name);
+}
 
-Predict the output:
+student();
+```
 
-```javascript
+2\. Predict the output:
+
+```
+var age = 18;
+var age = 21;
+
+console.log(age);
+```
+
+3\. Rewrite this code to avoid redeclaring the same variable:
+
+```
+var marks = 70;
+var marks = 85;
+var marks = 95;
+
+console.log(marks);
+```
+
+## **13. Exercises**
+
+### **Activity Time**
+
+**Exercise 1. Predict the output:**
+
+```
 var a = 5;
 
 function demo() {
@@ -318,57 +602,38 @@ demo();
 console.log(a);
 ```
 
-### Exercise 2
+**Exercise 2. Fix the code:**
 
-What will this print?
+Fix this code so `counter` is not accessible outside the function:
 
-```javascript
-if (true) {
-    var x = 30;
-}
-console.log(x);
 ```
-
-### Exercise 3
-
-Fix this code so `counter` is not accessible outside:
-
-```javascript
 for (var counter = 1; counter <= 5; counter++) {
     console.log(counter);
 }
-console.log(counter); // should be error
+console.log(counter); // should not be accessible
 ```
 
-### Exercise 4
+**Exercise 3. Explain the output:**
 
-Explain the error:
-
-```javascript
+```
 console.log(score);
 var score = 40;
 ```
 
-### Exercise 5
+## **14. Multiple Choice Questions**
 
-Write a function that contains another function and prints values from both scopes.
+### **Activity Time**
 
----
-
-# 14. Multiple Choice Questions
-
-### Q1. Which type of scope does `var` have?
+**Q1. Which type of scope does&#x20;**`var`**&#x20;have?**
 
 1. Block scope
 2. Function scope
 3. Lexical scope
 4. Module scope
 
-Answer: 2
+**Q2. What is the output?**
 
-### Q2. What is the output?
-
-```javascript
+```
 console.log(a);
 var a = 5;
 ```
@@ -378,38 +643,56 @@ var a = 5;
 3. 5
 4. null
 
-Answer: 2
-
-### Q3. Variables inside a function are:
+**Q3. Variables inside a function are:**
 
 1. Global
 2. Available everywhere
 3. Local to the function
 4. Hoisted globally
 
-Answer: 3
-
-### Q4. What is the scope chain?
+**Q4. What is the scope chain?**
 
 1. Searching nested scopes outward
 2. Chain of events
 3. Chain of functions
 4. Loop control
 
-Answer: 1
+**Q5. What will be the output?**
 
----
+```
+var x = 10;
 
-# 15. Mini Assignment 
+function test() {
+    var x = 20;
+    console.log(x);
+}
+
+test();
+console.log(x);
+```
+
+1. 10, 10
+2. 20, 20
+3. 20, 10
+4. Error
+
+**Q6. What happens when a&#x20;**`var`**&#x20;variable is declared inside an&#x20;**`if`**&#x20;block?**
+
+1. It becomes accessible only inside the block.
+2. It becomes function-scoped or global, depending on its surrounding scope.
+3. It always produces an error.
+4. It becomes a constant.
+
+## **15. Mini Assignment**
+
+### **Activity Time**
 
 Create a function `studentInfo()` that:
 
-* Defines a local variable `name`
-* Defines a local variable `course`
-* Defines an inner function `display()`
-* The inner function prints both variables
-* Call the inner function from the outer function
+- Defines a local variable `name`.
+- Defines a local variable `course`.
+- Defines an inner function `display()`.
+- The inner function prints both variables.
+- Calls the inner function from the outer function.
 
 This exercise shows **function scope**, **nested scope**, and **scope chain**.
-
----
